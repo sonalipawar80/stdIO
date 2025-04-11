@@ -1,0 +1,23 @@
+<h2 class="alert alert-secondary">Form For Student Info</h2>
+
+<form #stdForm="ngForm" class="form" (submit)="onsubmit()">
+    <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text"  id="fname" #fname="ngModel" ngModel required class="form-control" name="fname">
+    </div>
+    <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text"id="lname" #lname="ngModel" ngModel required class="form-control" name="lname">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" #email="ngModel" ngModel required class="form-control" name="email">
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" #contact="ngModel" ngModel required class="form-control" name="contact">
+    </div>
+
+    <button class="btn btn-blocked btn-info" *ngIf="!editMode" type="submit"> Add STd</button>
+    <button class="btn btn-blocked btn-info" *ngIf="editMode" type="button" (click)="updateonclick()">Update Std</button>
+</form>

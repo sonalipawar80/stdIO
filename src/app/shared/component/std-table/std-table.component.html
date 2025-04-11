@@ -1,0 +1,28 @@
+<table class="table table table-light table-striped">
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>Fname</th>
+            <th>Lname</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Edit</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of stdArr; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{std.fname}}</td>
+            <td>{{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td>
+                <button class="btn btn-sm btn-info" (click)="onclickEdit(std)">Edit</button>
+            </td>
+            <td>
+                <button class="btn btn-sm btn-danger" (click)="onremove(std)">Remove</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

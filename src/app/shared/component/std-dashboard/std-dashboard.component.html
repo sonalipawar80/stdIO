@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-md-4">
+        <app-std-form (emitnewObj)="emitedobj($event)" (emitUodatedObj)="UpdatedObj($event)"
+            [stdDataToEdit]="stdDataEdit"></app-std-form>
+    </div>
+    <div class="col-md-8">
+        <app-std-table [stdArr]="stdArr" (emitremoveobj)="onemitRem($event)"
+            (emitEditobj)="editdata($event)"></app-std-table>
+    </div>
+</div>
